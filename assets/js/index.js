@@ -8,18 +8,19 @@ movCont.forEach((cont) => {
 });
 movCont[0].style.display = "block";
 
+// 이벤트 시작
 movBtn.forEach((menu, idx) => {
     menu.addEventListener("click", (e) => {
         e.preventDefault();
 
         movBtn.forEach((item) => {
             item.classList.remove("active");
-        });
-        menu.classList.add("active");
+        }); // 모든 버튼에서 active 제거
+        menu.classList.add("active"); // 클릭한 버튼만 active 추가
 
         movCont.forEach((cont) => {
             cont.style.display = "none";
-        });
-        movCont[idx].style.display = "block";
+        }); // 모든 차트 숨기기
+        movCont[idx].style.display = "block"; // 클릭한 버튼과 같은 idx 번호의 콘텐츠 보이기
     });
 });

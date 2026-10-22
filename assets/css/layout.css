@@ -9,8 +9,14 @@
     background-color: #dedede;
 }
 #event {
+    padding: 24px;
+    background-color: #dedede;
+    padding-top: 0;
 }
 #opening {
+    background: url(../img/bg01.jpg) no-repeat center top;
+    background-size: cover;
+    padding: 24px;
 }
 #new {
 }
