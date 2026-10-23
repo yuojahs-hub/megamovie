@@ -194,6 +194,9 @@
     }
 }
 @media (max-width: 768px) {
+    #movie {
+        background-color: #dedede;
+    }
     #movie .row {
         padding: 0 24px;
         background-color: #fff;

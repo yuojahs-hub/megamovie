@@ -73,6 +73,9 @@
     }
 }
 @media (max-width: 768px) {
+    #header {
+        border-bottom: 1px solid #c6c6c6;
+    }
     .header {
         justify-content: flex-start;
     }

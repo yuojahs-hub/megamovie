@@ -40,6 +40,9 @@
 @media (max-width: 960px) {
 }
 @media (max-width: 768px) {
+    #event {
+        background-color: #dedede;
+    }
     #event .row {
         padding: 0 24px;
         background-color: #fff;
