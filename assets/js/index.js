@@ -50,3 +50,53 @@ tabList.forEach((a) => {
         a.nextElementSibling.style.display = "block";
     });
 });
+
+// 모바일 메뉴
+const ham = document.querySelector("#mNav .ham");
+const mNavMenu = document.querySelector("#mNav ul");
+
+ham.addEventListener("click", (e) => {
+    e.preventDefault();
+    mNavMenu.classList.toggle("active");
+});
+
+// 스크롤 이벤트
+window.addEventListener("scroll", () => {
+    let scrollTop = window.scrollY + window.innerHeight / 2;
+
+    let event = document.querySelector("#event");
+    let eventTop = event.offsetTop;
+
+    if (scrollTop >= eventTop) {
+        document.querySelector(".event_left").classList.add("show");
+        document.querySelector(".event_right").classList.add("show");
+    }
+
+    let opening = document.querySelector("#opening");
+    let openingTop = opening.offsetTop;
+    let openBox = document.querySelectorAll(".open_box > div ");
+
+    if (scrollTop >= openingTop) {
+        openBox.forEach((div) => {
+            div.classList.add("bounce");
+        });
+    }
+
+    let newSection = document.querySelector("#new");
+    let newSectionTop = newSection.offsetTop;
+
+    if (scrollTop >= newSectionTop) {
+        document.querySelector(".new_left").classList.add("show");
+        document.querySelector(".new_right").classList.add("show");
+    }
+
+    let helpSection = document.querySelector("#help");
+    let helpSectionTop = helpSection.offsetTop;
+    let helpBox = document.querySelectorAll(".help > div ");
+
+    if (scrollTop >= helpSectionTop) {
+        helpBox.forEach((div) => {
+            div.classList.add("show");
+        });
+    }
+});

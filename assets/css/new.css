@@ -20,6 +20,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transform: translateX(-300px);
+    opacity: 0;
+    transition: all 0.33s ease-in-out;
+}
+.new_left.show {
+    transform: translateX(0);
+    opacity: 1;
 }
 .new_right {
     width: 400px;
@@ -27,6 +35,14 @@
     background-color: #f2f2f2;
     padding: 34px;
     box-sizing: border-box;
+
+    transform: translateX(300px);
+    opacity: 0;
+    transition: all 0.33s 0.2s ease-in-out;
+}
+.new_right.show {
+    transform: translateX(0);
+    opacity: 1;
 }
 .new_right .title {
     font-size: 28px;

@@ -1,6 +1,11 @@
 /* 모바일 메뉴 */
 #mNav {
+    width: 100%;
     display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 300;
 }
 #mNav .ham {
     display: block;
@@ -12,7 +17,33 @@
     cursor: pointer;
 }
 #mNav ul {
-    display: none;
+    /* display: none; */
+    width: 40%;
+    height: 50vh;
+    position: absolute;
+    right: 0;
+    top: 57px;
+    background-color: #3d1f4c;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.71, 0.09, 0.24, 0.84);
+}
+#mNav ul.active {
+    transform: translateX(0);
+}
+#mNav ul li {
+    padding: 18px;
+    border-bottom: 1px solid #502a62;
+    text-align: center;
+}
+#mNav ul li:last-child {
+    border-bottom: 0;
+}
+#mNav ul li a {
+    font-size: 20px;
+    color: #e8cdf4;
+}
+#mNav ul li a:hover {
+    color: #ffffff;
 }
 
 /* 미디어 쿼리 */
