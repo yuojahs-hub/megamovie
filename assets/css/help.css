@@ -127,6 +127,9 @@
 .service ul li a {
     display: block;
 }
+.service ul li a:hover {
+    color: #6f2bc7;
+}
 .service ul li a img {
     width: 83px;
 }
@@ -155,6 +158,9 @@
     }
     .help_box3 {
         width: 100%;
+    }
+    .help_box3 h3 {
+        display: none;
     }
     .service ul {
         border: 1px solid #b2b2b2;
@@ -202,10 +208,37 @@
         padding: 24px;
         box-sizing: border-box;
     }
+    .service ul {
+        border: 0;
+    }
+    .service ul li {
+        height: 160px;
+    }
+    .service ul li a img {
+        width: 60px;
+    }
+    .service ul li a strong {
+        font-size: 16px;
+    }
 }
 @media (max-width: 600px) {
+    .service ul li {
+        width: 50%;
+        height: 100px;
+    }
 }
 @media (max-width: 480px) {
+    #help {
+        padding: 12px;
+    }
+    .notice > ul > li > a {
+        width: 75px;
+        padding: 10px 15px;
+    }
 }
+
 @media (max-width: 320px) {
+    .card ul {
+        height: 400px;
+    }
 }
